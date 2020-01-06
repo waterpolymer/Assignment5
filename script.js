@@ -1,6 +1,6 @@
 let amountOfRows =  2;
 let amountOfColumns = 2;
-let color = "white";
+let color = "blue";
 
 function addRow(){
     let mainGrid = document.getElementById("main-grid");
@@ -8,6 +8,7 @@ function addRow(){
 
     for(let i = 0; i < amountOfColumns; i++){
         let cell = document.createElement("td");
+        cell.className = "white-cell";
         cell.setAttribute('onclick', 'changeCellColor(this)')
         newRow.appendChild(cell);
     }
@@ -34,5 +35,15 @@ function selectColor() {
 }
 
 function changeCellColor(el) {
-    el.id = color + "-cell";
+    el.className = color + "-cell";
+}
+
+function fillUncoloredCells() {
+    let uncoloredCells = document.getElementsByClassName("white-cell");
+    uncoloredCells[0].className = color + "-cell";
+    // console.log(uncoloredCells.length);
+    // for(let i = 0; i < uncoloredCells.length; ++i) {
+    //     let cell = uncoloredCells[i]
+    //     cell.className = color + "-cell";
+    // }
 }

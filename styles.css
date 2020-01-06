@@ -1,22 +1,22 @@
 td {
-    height: 40px;
-    width: 40px;
+    height: 100px;
+    width: 100px;
 }
 body {
 	background-color: black
 }
-#white-cell {
+.white-cell {
 	background-color: white;
 }
-#red-cell {
+.red-cell {
 	background-color: red;
 }
-#blue-cell {
+.blue-cell {
 	background-color: blue;
 }
-#yellow-cell {
+.yellow-cell {
 	background-color: yellow;
 }
-#green-cell {
+.green-cell {
 	background-color: green;
 }
