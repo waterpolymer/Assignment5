@@ -1,5 +1,6 @@
 let amountOfRows =  2;
 let amountOfColumns = 2;
+let color = "white";
 
 function addRow(){
     let mainGrid = document.getElementById("main-grid");
@@ -7,6 +8,7 @@ function addRow(){
 
     for(let i = 0; i < amountOfColumns; i++){
         let cell = document.createElement("td");
+        cell.setAttribute('onclick', 'changeCellColor(this)')
         newRow.appendChild(cell);
     }
 
@@ -24,4 +26,13 @@ function addColumn(){
     }
 
     amountOfColumns++;
+}
+
+function selectColor() {
+    color = document.getElementById("color").value;
+    console.log(color);
+}
+
+function changeCellColor(el) {
+    el.id = color + "-cell";
 }

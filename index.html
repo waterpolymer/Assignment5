@@ -9,14 +9,22 @@
     <button onclick="addRow()">Add Row</button>
     <button onclick="addColumn()">Add Column</button>
 
+    <select id="color" onchange="selectColor()">
+        <option value="white" selected>White</option>
+        <option value="red">Red</option>
+        <option value="blue">Blue</option>
+        <option value="yellow">Yellow</option>
+        <option value="green">Green</option>
+    </select>
+
     <table id="main-grid">
         <tr>
-            <td></td>
-            <td></td>
+            <td id="white-cell" onclick="changeCellColor(this)"></td>
+            <td id="white-cell" onclick="changeCellColor(this)"></td>
         </tr>
         <tr>
-            <td></td>
-            <td></td>
+            <td id="white-cell" onclick="changeCellColor(this)"></td>
+            <td id="white-cell" onclick="changeCellColor(this)"></td>
         </tr>
     </table>
 </body>
