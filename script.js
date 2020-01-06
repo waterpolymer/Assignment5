@@ -12,17 +12,20 @@ function addRow(){
         newRow.appendChild(cell);
     }
 
-    mainGrid.appendChild(newRow);
+    mainGrid.children[0].appendChild(newRow);
     amountOfRows++;
 }
 
 function addColumn(){
     let mainGrid = document.getElementById("main-grid");
-    
+    let tableRows = mainGrid.children[0].children;
+    //table -> tbody -> tr -> td
+
+   console.log(tableRows[0]);  
+
     for(let i = 0; i < amountOfRows; i++){
         let cell = document.createElement("td");
-        //tr
-        mainGrid.children[i].children.appendChild(cell);
+        tableRows[i].appendChild(cell);
     }
 
     amountOfColumns++;
@@ -35,4 +38,25 @@ function selectColor() {
 
 function changeCellColor(el) {
     el.id = color + "-cell";
+}
+
+function removeRow(){
+    let mainGrid = document.getElementById("main-grid");    
+    let row = mainGrid.children[0].lastElementChild;
+
+    mainGrid.children[0].removeChild(row);
+
+    amountOfRows--;
+}
+
+function removeColumn(){
+    let mainGrid = document.getElementById("main-grid");
+    let tableRows = mainGrid.children[0].children;
+
+    for(let i = 0; i < amountOfRows; i++){
+        let column = tableRows[i].lastElementChild;
+        tableRows[i].removeChild(column);
+    }
+
+    amountOfColumns--;
 }

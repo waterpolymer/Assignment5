@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+    <meta charset="UTF-8">
+    <title>Document</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
     <button onclick="addRow()">Add Row</button>
     <button onclick="addColumn()">Add Column</button>
+    <button onclick="removeRow()">Remove Row</button>
+    <button onclick="removeColumn()">Remove Column</button>
 
     <select id="color" onchange="selectColor()">
         <option value="white" selected>White</option>
@@ -18,14 +21,16 @@
     </select>
 
     <table id="main-grid">
-        <tr>
-            <td id="white-cell" onclick="changeCellColor(this)"></td>
-            <td id="white-cell" onclick="changeCellColor(this)"></td>
-        </tr>
-        <tr>
-            <td id="white-cell" onclick="changeCellColor(this)"></td>
-            <td id="white-cell" onclick="changeCellColor(this)"></td>
-        </tr>
+        <tbody>
+            <tr>
+                <td id="white-cell" onclick="changeCellColor(this)"></td>
+                <td id="white-cell" onclick="changeCellColor(this)"></td>
+            </tr>
+            <tr>
+                <td id="white-cell" onclick="changeCellColor(this)"></td>
+                <td id="white-cell" onclick="changeCellColor(this)"></td>
+            </tr>
+        </tbody>
     </table>
 </body>
 
