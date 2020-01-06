@@ -20,15 +20,17 @@
         <option value="green">Green</option>
     </select>
 
+    <button onclick="fillUncoloredCells()">Fill Uncolored Cells</button>
+
     <table id="main-grid">
         <tbody>
             <tr>
-                <td id="white-cell" onclick="changeCellColor(this)"></td>
-                <td id="white-cell" onclick="changeCellColor(this)"></td>
+                <td class="white-cell" onclick="changeCellColor(this)"></td>
+                <td class="white-cell" onclick="changeCellColor(this)"></td>
             </tr>
             <tr>
-                <td id="white-cell" onclick="changeCellColor(this)"></td>
-                <td id="white-cell" onclick="changeCellColor(this)"></td>
+                <td class="white-cell" onclick="changeCellColor(this)"></td>
+                <td class="white-cell" onclick="changeCellColor(this)"></td>
             </tr>
         </tbody>
     </table>
