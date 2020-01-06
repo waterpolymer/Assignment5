@@ -26,6 +26,8 @@ function addColumn(){
 
     for(let i = 0; i < amountOfRows; i++){
         let cell = document.createElement("td");
+        cell.className = "white-cell";
+        cell.setAttribute('onclick', 'changeCellColor(this)')
         tableRows[i].appendChild(cell);
     }
 
