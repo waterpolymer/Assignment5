@@ -1,67 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <title>Grid</title>
     <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
-    </script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
-    </script>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+  </head>
 
-
-</head>
-
-<body>
+  <body>
     <div class="container" style="display: flex; flex-direction: column;">
-        <div class="card border-0 shadow my-5">
-            <div class="card-body p-5">
-                <div class="font-weight-light" style="text-align:center;">
-                    <h1>Grids</h1>
-                </div>
-                <div>
-                    <div class="buttons">
-                        <button onclick="addRow()">Add Row</button>
-                        <button onclick="addColumn()">Add Column</button>
-                        <button onclick="removeRow()">Remove Row</button>
-                        <button onclick="removeColumn()">Remove Column</button>
+      <div class="card border-0 shadow my-5">
+        <div class="card-body p-5">
+          <div class="font-weight-light" style="text-align:center;">
+            <h1>Grids</h1>
+          </div>
+          <div>
+            <div class="buttons">
+              <button onclick="addRow()">Add Row</button>
+              <button onclick="addColumn()">Add Column</button>
+              <button onclick="removeRow()">Remove Row</button>
+              <button onclick="removeColumn()">Remove Column</button>
 
-                        <select id="color" onchange="selectColor()">
-                            <option value="gray">Gray</option>
-                            <option value="red" selected>Red</option>
-                            <option value="blue">Blue</option>
-                            <option value="yellow">Yellow</option>
-                            <option value="green">Green</option>
-                        </select>
-                    </div>
-                    <div>
-                        <table id="main-grid" onmousedown="mouseDownEvent()" onmouseup="mouseUpEvent()">
-                            <tbody>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-                <div class="buttons">
-                    <button onclick=" fillUncoloredCells()">Fill Empty Cells</button>
-                    <button onclick="fillAllCells()">Fill All Cells</button>
-                    <button onclick="resetCells()">Reset Cells</button>
-                </div>
+              <select id="color" onchange="selectColor()">
+                <option value="gray">Gray</option>
+                <option value="red" selected>Red</option>
+                <option value="blue">Blue</option>
+                <option value="yellow">Yellow</option>
+                <option value="green">Green</option>
+              </select>
             </div>
+            <div>
+              <table
+                id="main-grid"
+                onmousedown="mouseDownEvent()"
+                onmouseup="mouseUpEvent()"
+              >
+                <tbody></tbody>
+              </table>
+            </div>
+          </div>
+          <div class="buttons">
+            <button onclick=" fillUncoloredCells()">Fill Empty Cells</button>
+            <button onclick="fillAllCells()">Fill All Cells</button>
+            <button onclick="resetCells()">Reset Cells</button>
+          </div>
         </div>
+      </div>
     </div>
-</body>
-<script src="script.js"></script>
-<script>
+  </body>
+  <script src="script.js"></script>
+  <script>
     initialize();
     updateColor("red");
-</script>
-
+  </script>
 </html>

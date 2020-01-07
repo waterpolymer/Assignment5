@@ -1,12 +1,3 @@
-td {
-	height: 50px;
-	width: 50px;
-}
-
-body {
-	background-color: black
-}
-
 .gray-cell {
 	background-color: gray;
 }
@@ -35,12 +26,15 @@ body {
 	-o-background-size: cover;
 }
 
+
 table {
 	border-collapse: collapse;
 	margin: auto;
 }
 
 td {
+	height: 50px;
+	width: 50px;
 	border: 5px solid black;
 }
 
