@@ -59,7 +59,7 @@ select {
 	margin: 4px 2px;
 	cursor: pointer;
 	border: 4px solid pink;
-	-webkit-appearance:none;
+	-webkit-appearance: none;
 }
 
 .buttons {
