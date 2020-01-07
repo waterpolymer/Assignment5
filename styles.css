@@ -1,22 +1,75 @@
 td {
-    height: 100px;
-    width: 100px;
+	height: 50px;
+	width: 50px;
 }
+
 body {
 	background-color: black
 }
-.white-cell {
-	background-color: white;
+
+.gray-cell {
+	background-color: gray;
 }
+
 .red-cell {
 	background-color: red;
 }
+
 .blue-cell {
-	background-color: blue;
+	background-color: #1976d2;
 }
+
 .yellow-cell {
-	background-color: yellow;
+	background-color: #ebd534;
 }
+
 .green-cell {
 	background-color: green;
+}
+
+body {
+	background: url('https://tech4pc.net/images/flatzero-by-articted-dsktps__aHR0cDovL3d3dy5kc2t0cHMuY29tL3dhbGxwYXBlcnMvMjAxMy8xMS8xMjFfRkxBVHplcm9fYnlfYXJ0aWN0ZWRfMjg4MHgxODAwLmpwZw==.jpg') no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	background-size: cover;
+	-o-background-size: cover;
+}
+
+table {
+	border-collapse: collapse;
+	margin: auto;
+}
+
+td {
+	border: 5px solid black;
+}
+
+button {
+	background-color: #1976d2;
+	border: none;
+	color: white;
+	padding: 15px 32px;
+	text-align: center;
+	font-size: 10px;
+	margin: 4px 2px;
+	cursor: pointer;
+}
+
+select {
+	background-color: grey;
+	border: none;
+	color: white;
+	padding: 15px 32px;
+	text-align: center;
+	font-size: 10px;
+	margin: 4px 2px;
+	cursor: pointer;
+}
+
+.buttons {
+	padding: 20px 20px;
+	margin: 10px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
