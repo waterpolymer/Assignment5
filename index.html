@@ -22,15 +22,15 @@
 
     <button onclick="fillUncoloredCells()">Fill Uncolored Cells</button>
 
-    <table id="main-grid">
+    <table id="main-grid" onmousedown="mouseDownEvent()" onmouseup="mouseUpEvent()">
         <tbody>
             <tr>
-                <td class="white-cell" onclick="changeCellColor(this)"></td>
-                <td class="white-cell" onclick="changeCellColor(this)"></td>
+                <td class="white-cell" onclick="changeCellColor(this)" onmouseover="mouseHover(this)"></td>
+                <td class="white-cell" onclick="changeCellColor(this)" onmouseover="mouseHover(this)"></td>
             </tr>
             <tr>
-                <td class="white-cell" onclick="changeCellColor(this)"></td>
-                <td class="white-cell" onclick="changeCellColor(this)"></td>
+                <td class="white-cell" onclick="changeCellColor(this)" onmouseover="mouseHover(this)"></td>
+                <td class="white-cell" onclick="changeCellColor(this)" onmouseover="mouseHover(this)"></td>
             </tr>
         </tbody>
     </table>

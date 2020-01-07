@@ -1,15 +1,18 @@
 let amountOfRows =  2;
 let amountOfColumns = 2;
 let color = "blue";
+let isMouseDown = false;
+
+let mainGrid = document.getElementById("main-grid");
 
 function addRow(){
-    let mainGrid = document.getElementById("main-grid");
     let newRow = document.createElement("tr");
 
     for(let i = 0; i < amountOfColumns; i++){
         let cell = document.createElement("td");
         cell.className = "white-cell";
-        cell.setAttribute('onclick', 'changeCellColor(this)')
+        cell.setAttribute('onclick', 'changeCellColor(this)');
+        cell.setAttribute('onmouseover', 'mouseHover(this) ');
         newRow.appendChild(cell);
     }
 
@@ -18,16 +21,14 @@ function addRow(){
 }
 
 function addColumn(){
-    let mainGrid = document.getElementById("main-grid");
     let tableRows = mainGrid.children[0].children;
     //table -> tbody -> tr -> td
-
-   console.log(tableRows[0]);  
 
     for(let i = 0; i < amountOfRows; i++){
         let cell = document.createElement("td");
         cell.className = "white-cell";
         cell.setAttribute('onclick', 'changeCellColor(this)')
+        cell.setAttribute('onmouseover', 'mouseHover(this)');
         tableRows[i].appendChild(cell);
     }
 
@@ -36,7 +37,7 @@ function addColumn(){
 
 function selectColor() {
     color = document.getElementById("color").value;
-    console.log(color);
+    //console.log(color);
 }
 
 function changeCellColor(el) {
@@ -54,16 +55,12 @@ function fillUncoloredCells() {
 }
 
 function removeRow(){
-    let mainGrid = document.getElementById("main-grid");    
     let row = mainGrid.children[0].lastElementChild;
-
     mainGrid.children[0].removeChild(row);
-
     amountOfRows--;
 }
 
 function removeColumn(){
-    let mainGrid = document.getElementById("main-grid");
     let tableRows = mainGrid.children[0].children;
 
     for(let i = 0; i < amountOfRows; i++){
@@ -72,4 +69,36 @@ function removeColumn(){
     }
 
     amountOfColumns--;
+}
+
+function mouseDownEvent(){
+    //console.log("Mouse  is down")
+    isMouseDown = true;
+}
+
+function mouseUpEvent(){
+    isMouseDown = false;
+    let tableRows = mainGrid.children[0].children
+
+    for(let i = 0; i < amountOfRows; i++){
+        for(let j = 0; j < amountOfColumns; j++){
+
+            let cell = tableRows[i].children[j];
+
+            //console.log(cell);
+            if(cell.children.length > 0){
+                cell.removeChild(cell.children[0]);
+                changeCellColor(cell);
+            }
+        }
+    }
+}
+
+function mouseHover(eli){
+    if(isMouseDown){
+        let tmp = document.createElement("p");
+        eli.appendChild(tmp);
+        console.log("Am hovering when mousedown");
+        //console.log(event);
+    }
 }
