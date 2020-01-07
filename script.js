@@ -67,7 +67,16 @@ function removeColumn() {
 }
 
 function updateColor(newColor) {
-    color = newColor;
+    switch (newColor) {
+        case "#1976d2":
+            color = "blue"
+            break;
+        case "#ebd534":
+            color = "yellow"
+            break;
+        default:
+            color = newColor;
+    }
     document.getElementById("color").style.backgroundColor = newColor;
 }
 
