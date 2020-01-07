@@ -46,12 +46,13 @@ function changeCellColor(el) {
 
 function fillUncoloredCells() {
     let uncoloredCells = document.getElementsByClassName("white-cell");
-    uncoloredCells[0].className = color + "-cell";
-    // console.log(uncoloredCells.length);
-    // for(let i = 0; i < uncoloredCells.length; ++i) {
-    //     let cell = uncoloredCells[i]
-    //     cell.className = color + "-cell";
-    // }
+
+    // uncoloredCells[0].className = color + "-cell";
+
+    for(let i = uncoloredCells.length - 1; i >= 0; --i) {
+        console.log(uncoloredCells.length);
+        uncoloredCells[i].className = color + "-cell";
+    }
 }
 
 function removeRow(){
