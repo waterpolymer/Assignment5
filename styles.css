@@ -26,7 +26,6 @@ body {
 	-o-background-size: cover;
 }
 
-
 table {
 	border-collapse: collapse;
 	margin: auto;
@@ -59,7 +58,8 @@ select {
 	font-size: 10px;
 	margin: 4px 2px;
 	cursor: pointer;
-	border: 4px solid pink
+	border: 4px solid pink;
+	-webkit-appearance:none;
 }
 
 .buttons {
